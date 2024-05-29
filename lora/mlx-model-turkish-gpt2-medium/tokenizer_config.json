@@ -1,0 +1,31 @@
+{
+  "add_bos_token": false,
+  "add_prefix_space": false,
+  "added_tokens_decoder": {
+    "0": {
+      "content": "<|endoftext|>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "50257": {
+      "content": "<|stop|>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    }
+  },
+  "bos_token": "<|endoftext|>",
+  "chat_template": "{% set message_count = messages|length %}{% if message_count >= 4 and messages[-4].role == 'user' %}{% set recent_messages = messages[-4:] %}{% elif message_count > 3 %}{% set recent_messages = messages[-3:] %}{% else %}{% set recent_messages = messages %}{% endif %}{% for message in recent_messages %}{% if message.role == 'user' %}### Kullanıcı:\n{{ message.content }}\n{% elif message.role == 'assistant' %}### Asistan:\n{{ message.content }}\n{% endif %}{% endfor %}{% if messages[-1]['role'] == 'user' %}### Asistan:\n{% endif %}",
+  "clean_up_tokenization_spaces": true,
+  "eos_token": "<|stop|>",
+  "errors": "replace",
+  "model_max_length": 1000000000000000019884624838656,
+  "pad_token": "<|endoftext|>",
+  "tokenizer_class": "GPT2Tokenizer",
+  "unk_token": "<|endoftext|>"
+}

@@ -13,10 +13,11 @@ import transformers
 from huggingface_hub import snapshot_download
 
 
-def fetch_from_hub(hf_path: str):
+def fetch_from_hub(hf_path: str, force_download: bool = False):
     model_path = snapshot_download(
         repo_id=hf_path,
         allow_patterns=["*.json", "*.safetensors", "tokenizer.model"],
+        force_download=force_download,
     )
     weight_files = glob.glob(f"{model_path}/*.safetensors")
     if len(weight_files) == 0:
@@ -26,9 +27,10 @@ def fetch_from_hub(hf_path: str):
     for wf in weight_files:
         weights.update(mx.load(wf).items())
 
-    config = transformers.AutoConfig.from_pretrained(hf_path)
+    config = transformers.AutoConfig.from_pretrained(hf_path, force_download=force_download)
     tokenizer = transformers.AutoTokenizer.from_pretrained(
         hf_path,
+        force_download=force_download,
     )
     return weights, config.to_dict(), tokenizer
 

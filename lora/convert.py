@@ -80,11 +80,17 @@ if __name__ == "__main__":
         type=str,
         default=None,
     )
+    parser.add_argument(
+        "-f",
+        "--force-download",
+        help="Force download the model from Hugging Face.",
+        action="store_true",
+    )
 
     args = parser.parse_args()
 
     print("[INFO] Loading")
-    weights, config, tokenizer = utils.fetch_from_hub(args.hf_path)
+    weights, config, tokenizer = utils.fetch_from_hub(args.hf_path, args.force_download)
 
     dtype = mx.float16 if args.quantize else getattr(mx, args.dtype)
     weights = {k: v.astype(dtype) for k, v in weights.items()}
