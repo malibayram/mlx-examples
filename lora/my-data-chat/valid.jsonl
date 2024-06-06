@@ -1,4 +1,20 @@
-{"messages":[{"content":"You are an text to SQL query translator. Users will ask you questions in English and you will generate a SQL query based on the provided SCHEMA.\nSCHEMA:\nCREATE TABLE CHARACTERISTICS (characteristic_id VARCHAR, characteristic_name VARCHAR); CREATE TABLE ref_colors (color_code VARCHAR, color_description VARCHAR); CREATE TABLE products (product_id VARCHAR, color_code VARCHAR); CREATE TABLE product_characteristics (product_id VARCHAR, characteristic_id VARCHAR)","role":"system"},{"content":"Find the number of the products that have their color described as \"red\" and have a characteristic named \"slow\".","role":"user"},{"content":"SELECT COUNT(*) FROM products AS t1 JOIN product_characteristics AS t2 ON t1.product_id = t2.product_id JOIN CHARACTERISTICS AS t3 ON t2.characteristic_id = t3.characteristic_id JOIN ref_colors AS t4 ON t1.color_code = t4.color_code WHERE t4.color_description = \"red\" AND t3.characteristic_name = \"slow\"","role":"assistant"}]}
+{
+  "messages":
+  [
+    {
+      "content": "You are an text to SQL query translator. Users will ask you questions in English and you will generate a SQL query based on the provided SCHEMA.\nSCHEMA:\nCREATE TABLE CHARACTERISTICS (characteristic_id VARCHAR, characteristic_name VARCHAR); CREATE TABLE ref_colors (color_code VARCHAR, color_description VARCHAR); CREATE TABLE products (product_id VARCHAR, color_code VARCHAR); CREATE TABLE product_characteristics (product_id VARCHAR, characteristic_id VARCHAR)",
+      "role":"system"
+    },
+    {
+      "content":"Find the number of the products that have their color described as \"red\" and have a characteristic named \"slow\".",
+      "role":"user"
+    },
+    {
+      "content":"SELECT COUNT(*) FROM products AS t1 JOIN product_characteristics AS t2 ON t1.product_id = t2.product_id JOIN CHARACTERISTICS AS t3 ON t2.characteristic_id = t3.characteristic_id JOIN ref_colors AS t4 ON t1.color_code = t4.color_code WHERE t4.color_description = \"red\" AND t3.characteristic_name = \"slow\"",
+      "role":"assistant"
+    }
+  ]
+}
 {"messages":[{"content":"You are an text to SQL query translator. Users will ask you questions in English and you will generate a SQL query based on the provided SCHEMA.\nSCHEMA:\nCREATE TABLE table_name_20 (iata VARCHAR, icao VARCHAR)","role":"system"},{"content":"Name the IATA of wmkk","role":"user"},{"content":"SELECT iata FROM table_name_20 WHERE icao = \"wmkk\"","role":"assistant"}]}
 {"messages":[{"content":"You are an text to SQL query translator. Users will ask you questions in English and you will generate a SQL query based on the provided SCHEMA.\nSCHEMA:\nCREATE TABLE table_2850912_10 (player VARCHAR, nhl_team VARCHAR)","role":"system"},{"content":"Which player was drafted by the New York Rangers? ","role":"user"},{"content":"SELECT player FROM table_2850912_10 WHERE nhl_team = \"New York Rangers\"","role":"assistant"}]}
 {"messages":[{"content":"You are an text to SQL query translator. Users will ask you questions in English and you will generate a SQL query based on the provided SCHEMA.\nSCHEMA:\nCREATE TABLE table_25643046_1 (location VARCHAR, origin_time VARCHAR)","role":"system"},{"content":"Where was the quake that began at 14:07?","role":"user"},{"content":"SELECT location FROM table_25643046_1 WHERE origin_time = \"14:07\"","role":"assistant"}]}
