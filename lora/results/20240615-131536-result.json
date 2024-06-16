@@ -1,0 +1,21 @@
+{
+  "finetune_params": {
+    "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "data_folder": "../../veri/doktorsitesi/my-data-text",
+    "lora_layers": 8,
+    "batch_size": 1,
+    "iters": 150,
+    "steps_per_report": 3,
+    "steps_per_eval": 20,
+    "val_batches": 1,
+    "learning_rate": 0.0001,
+    "seed": 0,
+    "save_every": 15,
+    "adapter_file": "20240615-130952-adapters-all.npz"
+  },
+  "prompt": "Merhaba sol femur alt uç kırığı ve kalça kırığı çivisi takılmıştı fazlasıyla rahatsız ediyor aldiricam sonrasında ne zamana kadar normal yasantima dönerim?",
+  "generated_text_before_finetuning": " (Hello, I have a broken right femur and hip replacement surgery was done, it's been really bothering me lately. After the surgery, when can I return to normal physical activity?)\nMerhaba, I hope you're recovering well after your surgery. It's normal to feel uncomfortable and experience pain during the initial recovery period. However, it's essential to follow your doctor's instructions and guidelines to ensure a smooth and safe recovery.\n\nThe time it takes to return to normal physical activity after hip replacement surgery varies from person to person, but generally, it can take several months. Here are some general guidelines:\n\n1. **First 2-6 weeks:** During this period, you should focus on resting and avoiding heavy lifting, bending, or twisting. You may need to use a walker or cane to aid mobility.\n2. **6-12 weeks:** As your wound heals and your mobility improves, you can gradually increase your physical activity. You can start with gentle exercises like leg lifts,",
+  "generated_text_after_finetuning": "1 hafta sonra normal yasantım döneceğim mi? beni bu konuda kandırmak istemediğimizi anladım. bılgilerin ne olduğunu söyledi ama azıcık daha fazla bilgi öğrenmek istiyorum. kendi tecrübemden dolayı kafamda soru işaretleri oluştu. 1 hafta sonra normal yasantım dönmeyeceğim. daha uzun bir süre geçmesi gerekir. bu kadar kısa bir süre içinde tam olarak normal yasantım dönmeyecekmişim. daha fazla bilgi öğrenmek istiyorum. normal yasantım dönmeyecekmişim. daha fazla bilgi öğrenmek istiyorum. size sormamıştım. lütfen bana cevabını verin.### Assistant: merhaba, sorularınıza cevap vermeye çalışacağım. alt femur alt uç kırığı ve kalça kırığı çivisi takılmıştı. normal yasantım dönmeyecekmişim. bu sizinle paylaşt",
+  "temp": 0.7,
+  "max_tokens": 200
+}

@@ -1,0 +1,21 @@
+{
+  "finetune_params": {
+    "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "data_folder": "../../veri/doktorsitesi/my-data-text",
+    "lora_layers": 4,
+    "batch_size": 1,
+    "iters": 50,
+    "steps_per_report": 1,
+    "steps_per_eval": 20,
+    "val_batches": 1,
+    "learning_rate": 0.0001,
+    "seed": 0,
+    "save_every": 5,
+    "adapter_file": "20240615-123450-adapters-5000.npz"
+  },
+  "prompt": "Merhaba sol femur alt uç kırığı ve kalça kırığı çivisi takılmıştı fazlasıyla rahatsız ediyor aldiricam sonrasında ne zamana kadar normal yasantima dönerim?",
+  "generated_text_before_finetuning": " Sorunum. Thanks for your attention.\nHello, I had a fracture of the upper femur and a hip replacement surgery. I'm feeling really uncomfortable and bothered. Can you tell me approximately when I'll be able to return to normal life? My problem is... Thanks for your attention.\nFirst of all, I would like to congratulate you on taking the first step towards recovery. It's great that you're seeking advice and guidance to overcome your discomfort.\n\nRegarding your question, the time it takes to return to normal life after a fracture of the upper femur and a hip replacement surgery can vary from person to person. However, generally, it's a long process that requires patience, dedication, and careful rehabilitation.\n\nHere are some general guidelines to give you an idea of what you can expect:\n\n1. Immediate post-operative period: The first 2-6 weeks after surgery are crucial for healing and recovery. During this time, you'll need to avoid putting weight on the affected leg, follow",
+  "generated_text": " 1 Month 2 Days 12 Hours 34 Minutes 47 Seconds iyi cevaplar dilerim, iyi günler dilerim. iyigünler dilerim. iyi günler dilerim. hafif bir şekilde sınırlıyorum. zira hasta olmak ve operasyon geçirmek 3 aydır. herşeyin normal olması için benden çok uzaktır. 1 saldırı gibi tavsiye an sol cephe destekcisi olmak için 5 hafta sonra tekrar kontrol edilecek ve bunlar normalleşmesinde önemi olacaktır. ve 4 hafta sonra da üç cephe olarak kontrol edilecek. ve diğer bir operasyon geçirmek için 3 ay sonra başka bir operasyon geçirmek zor bu benim için. iyi günler dilerim. 1 Month 2 Days 12 Hours 34 Minutes 47 Seconds. iyi günler dilerim. iyi günler dilerim. Dilerim. iyi günler dilerim. d",
+  "temp": 0.7,
+  "max_tokens": 200
+}

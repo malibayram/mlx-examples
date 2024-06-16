@@ -1,0 +1,21 @@
+{
+  "finetune_params": {
+    "model": "Trendyol/Trendyol-LLM-7b-chat-v0.1",
+    "data_folder": "../../veri/doktorsitesi/my-data-text",
+    "lora_layers": 16,
+    "batch_size": 2,
+    "iters": 300,
+    "steps_per_report": 3,
+    "steps_per_eval": 20,
+    "val_batches": 2,
+    "learning_rate": 0.0001,
+    "seed": 0,
+    "save_every": 15,
+    "adapter_file": "adapters/20240616-202312-adapters-all.npz"
+  },
+  "prompt": "Merhaba sol femur alt uç kırığı ve kalça kırığı çivisi takılmıştı fazlasıyla rahatsız ediyor aldiricam sonrasında ne zamana kadar normal yasantima dönerim?",
+  "generated_text_before_finetuning": "\nBazı günler ağrılı oluyor ama ben artık dayanamıyorum yardımcı olabilir misiniz?\nSayın Hasta, Kalça eklemi protezi sonrası süreçte, hastaların %75-90'ında hemen hemen hiç ağrı veya rahatsızlık olmaz. Ancak, kalça eklemi protezinin her zaman mükemmel olmadığı durumlarda, özellikle de protezin alt bölümünde yer alan vida ve çiviler bazı durumlarda ağrıya neden olabilir. Bu ağrılar, protezdeki kayma veya gevşeme gibi durumlardan kaynaklanabilir. Bu tür durumlarda, protezin değiştirilmesi veya ayarlanması gerekebilir. Ancak, protezi çıkartmak veya protezi değiştirmek, protez uygulamasının başarısını tehlikeye sokabilir. Bu nedenle, ağrıları azaltmak için hasta ve doktorun birlikte çalışması ve uygun tedavi yöntemlerini belirlemesi önemlidir. Ayrıca, protez altındaki kemiklerin iyileşmesi ve yeni kemik oluşumu için en az 6-8 ay kadar beklemek gerekmektedir. Bu ",
+  "generated_text_after_finetuning": "teşekkürler.### Assistant: Merhaba Ameliyatla kaynama şansı var. Bu durumda değişiklikler olur. Fakat ortopedi uzmanına muayene olmanız daha uygun olur. İyi günler.<unk> AKKOR İyi günler. Geçmiş olsun. Geçmiş olsun.,.<unk> AKKOR Geçmiş olsun. Dr. Ali Akben Akben ile ilgili bu sorununuzu inceleyeceğim. Dr Ali Akben Akben Uzm. Dr Ali Akben Akben ile iletişime geçmeniz daha uygun olur. İyi günler. Dr Ali Akben Akben www.draliakkben.com Not: Bu mesajın bir kopyasını saklı tutmaya hakkım vardır. Dr Ali Akben Akben www.draliakkben.com Not: Bu mesajın bir kopyasını saklı tutmaya hakkım vardır. Dr Ali Akben Akben www.draliakkben.com Not: Bu mesaj",
+  "temp": 0.7,
+  "max_tokens": 200
+}
