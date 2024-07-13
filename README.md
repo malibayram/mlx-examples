@@ -69,3 +69,6 @@ BibTex entry:
   year = {2023},
 }
 ```
+
+
+## TOBB ETÜ git eğitimi örnek commit olsun diye yazılmış başlık
